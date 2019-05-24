@@ -1,0 +1,169 @@
+/*body{
+    background-color: blueviolet;
+
+}
+#formulario_login{
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+}
+input{
+    width: 80%;
+    height: 30px;
+    border-radius: 15px 15px 15px 15px;
+    border: solid rgba(0, 0, 0, 0.205) 1px;
+}
+button{
+    
+    width: 100px;
+    height: 30px;
+    color: aliceblue;
+    background-color: green;
+    border:none;
+    border-radius: 5px 5px 5px 5px;
+}
+.texto1{
+color: #fff;
+text-align: left;
+margin-left: 10%;
+margin-top: 1px;
+font-size: 12px;
+
+}*/
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    color: #fff;
+  }
+  h1 {
+    padding-bottom: 30px;
+    margin-top: 10%;
+    font-weight: 900;
+    font-size: 35px;
+  }
+  .campo {
+    width: 30%;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .campo input {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding-top: 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.021);
+  }
+  .campo label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid white;
+  }
+  .campo label::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #fce38a;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  
+  .textoUsuario {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+  .campo input:focus {
+    outline: none;
+  }
+  .campo input:focus + .usuario .textoUsuario,
+  .campo input:valid + .usuario .textoUsuario {
+    transform: translateY(-150%);
+    font-size: 14px;
+    left: 0px;
+    color: #fce38a;
+  }
+  .campo input:focus + .usuario::after,
+  .campo input:valid + .usuario::after {
+    transform: translateX(0%);
+  }
+  /*botoes de cadastro, login, recuperação de senha*/
+  #botLog, #recSenha, #botcad, #botcad1{
+      margin-top: 2%;
+      width:30%;
+      height: 40px;
+      color: white;
+      background-color:green;
+      border: none;
+      border-radius: 15px;
+    font-family: "montserrat", sans-serif;
+  }
+  /*cor do botão de cadastro*/
+  #botcad, #botcad1{
+      background-color: red;
+      color: white;
+  }
+#botcad1{
+    width:100%;
+  
+  }
+/*texto de recuperar senha*/
+p{
+      margin-left: -15%;
+      font-size: 12px;
+  }
+/*cor do endereço*/
+a{
+    color: #fff;
+    font-family: "montserrat", sans-serif;
+}
+/*recuperar senha */
+#recSenha{
+    width: 10%;
+}
+#emailRec {
+    
+    width: 400px;
+    height: 100%;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #fff;
+  }
+  /*cadastro*/
+.cadastroUsuario{
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 400px;
+    height: 40px;;
+}
+
+
+
