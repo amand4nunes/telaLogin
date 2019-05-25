@@ -1,0 +1,15 @@
+// aqui você configura com os dados do azure
+{
+	"database": {
+		"server": "servidor01191064.database.windows.net",
+		"user": "gf01191064",
+		"password": "#Gf46468318807",
+		"database": "bcInovacao",
+		"options": {
+			"encrypt": true
+		}
+	},
+	"security":{
+		"key": "CHAVE_SEGURANCA"
+	}
+}
