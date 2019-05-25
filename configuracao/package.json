@@ -1,7 +1,0 @@
-{
-"adress" : "licalhost",
-"port":27017,
-"db":"testeApi",
-"user":"",
-"pass":""
-}

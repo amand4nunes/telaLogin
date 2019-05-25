@@ -1,4 +1,3 @@
-// aqui você configura com os dados do azure
 {
 	"database": {
 		"server": "servidor01191064.database.windows.net",
