@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var cadastroRouter = require('./routes/cadastro');
 var loginRouter = require('./routes/login');
-
+var usuariosRouter = require('./routes/usuarios')
 var app = express();
 
 // view engine setup
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // aqui você cria  um app com o nome da funçoes como na linha 6
 app.use('/cadastro',cadastroRouter);
 app.use('/login', loginRouter);
-
+app.use('/usuarios', usuariosRouter);
 
 // catch 404 and forward to error handler mensagem de erro 
 app.use(function(req, res, next) {
