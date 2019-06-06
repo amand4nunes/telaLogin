@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Database = require('../Database');
-// const Cryptr = require('cryptr');
+
 const config = require('../config');
-// const cryptr = new Cryptr(config.security.key);
 	
 //Variaveis para armazenar os dados do formulário
 	var email, senha;
@@ -25,7 +24,6 @@ router.post('/', (req, res, next) => {
 	verificarLogin(email, res, req).then(existe => { // Função para verificar se existe algum login com o email digitado
 		logar = existe; // <-- Armazena o resultado que foi buscado da função verificar login, caso seja true pode logar caso n seja, usuário n encontrado
 		console.log('Logar:', logar);
-		// console.log('Senha banco:', senhaBanco);
 			
 			if(senhaBanco == 0){ // Verifica se a senha vinda do banco n é nula
 				next; // Caso seja, ele pela todo resto e manda uma mensagem de erro para o cliente
@@ -60,10 +58,7 @@ function verificarLogin(email, res, req) {
                 if(existe > 0){ // Caso Existe seja true executa as linhas abaixo
                 	results = results.recordsets[0]; // Armazena o retorno na variavel results
 	                senhaBanco = results[0].senha; // Pega a senha cadastrada no registro encontrado e a coloca na variavel global
-	                // idCadastro = results[0].codUsuario; //Pega o codUsuario cadastrado no registro e o coloca na variavel global
-	                // console.log(results[0].codUsuario);
-	                // console.log(results[0].nomeUsuario);
-
+	              
                 }
 
 				resolve(results);
@@ -78,5 +73,5 @@ function verificarLogin(email, res, req) {
 
 
 
-//Não mexa nessa linha
+//não mexer
 module.exports = router;

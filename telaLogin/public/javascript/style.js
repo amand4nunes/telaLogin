@@ -1,12 +1,23 @@
-function validar_cad(nome,key){
-   
-    if (nome == "amanda" && key == "amarelo") {
-    window.location = "index.html";
-  }
-  else{
-    alert("Dados incorretos, tente novamente");
-  }
-}
+function validar_cad( ){
+    var dados = $("#logar").serialize(); //controle de formulario
+    console.log(dados);
+    $.ajax({ //ponte servidor 
+        url:"../login",
+        type:"post",
+        data: dados//chamando arquivo externo de configuração
+
+    }).done(function(resposta){
+        if(resposta== 'ok'){
+            
+            window.location = "index.html";
+
+        }
+        else{
+            alert("senha ou email incorretos");
+        }
+    });
+   }
+  
 function cadastrar(){ 
     var dados = $("#cad").serialize();
     console.log(dados);

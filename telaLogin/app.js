@@ -3,9 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-//aqui voce cria as funçoes para chamar o router 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
 var cadastroRouter = require('./routes/cadastro');
 var loginRouter = require('./routes/login');
 
@@ -20,9 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 // aqui você cria  um app com o nome da funçoes como na linha 6
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/cadastro',cadastroRouter);
 app.use('/login', loginRouter);
 

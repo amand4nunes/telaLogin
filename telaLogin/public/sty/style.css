@@ -1,27 +1,46 @@
 
 
 
-body, #logar {
-  display: flex;
+body {
+
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background: url("https://cdn.pixabay.com/photo/2016/02/19/11/19/computer-1209641_960_720.jpg") no-repeat  ;
+  background-size:1500px 1000px;
+  background-position: center;
   font-family: "montserrat", sans-serif;
   font-weight: 500;
   color: #fff;
 }
-#logar{
-width: 100%;
+#logo{
+width:150px;
+height:150px;
+border-radius: 100px;	
+}
+#logar, #cad{
+
+padding-left:15%;
+margin-left: 25%;
+}
+
+b{
+  font-family: "halfomania";
+  font-size: 200px;
+  text-align: center;
 }
 h1 {
+padding-left:10%;
   padding-bottom: 30px;
-  margin-top: 10%;
+  margin-top: -1%;
   font-weight: 900;
   font-size: 35px;
 }
+#cadastro{
+padding-left:45%;
+}
 .campo {
-  width: 30%;
+  width: 40%;
   position: relative;
   height: 60px;
   overflow: hidden;
@@ -36,6 +55,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.021);
 }
 .campo label {
+
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -79,22 +99,23 @@ h1 {
 }
 /*botoes de cadastro, login, recuperação de senha*/
 #botLog, #recSenha, #botcad, #botcad1,#botcad3{
-  margin-top: 2%;
-  width:30%;
-  height: 40px;
-  color: white;
-  background-color:green;
+  width:20%;
   border: none;
-  border-radius: 15px;
-font-family: "montserrat", sans-serif;
+  height: 40px;
+  color: #fff;
+  background-color:green;
+  font-family: "montserrat", sans-serif;
+  
+  
 }
 /*cor do botão de cadastro*/
 #botcad, #botcad1{
   background-color: red;
   color: white;
+  
 }
 #botcad1, #botcad3{
-width:100%;
+width:24%;
 
 }
 #botcad3{
@@ -102,7 +123,6 @@ background-color: blue;
 }
 /*texto de recuperar senha*/
 p{
-    margin-left: -15%;
     font-size: 12px;
 }
 /*cor do endereço*/
